@@ -21,7 +21,11 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "DevHocket",
-  description: "Built by a dev, for devs.",
+  description:
+    "Ask questions, share knowledge, and connect with developers. DevHocket is a community-driven Q&A platform for web development, algorithms, and programming help.",
+  icons: {
+    icon: "/images/favicon.ico",
+  },
 };
 
 export default function RootLayout({
