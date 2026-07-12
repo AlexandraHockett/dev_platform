@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
+import { Space_Grotesk, Inter, JetBrains_Mono, Geist } from "next/font/google";
 
 import "./globals.css";
 import ThemeProvider from "@/context/Theme";
+import { cn } from "@/lib/utils";
+import Navbar from "@/components/navigation/navbar";
+
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -37,11 +41,20 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={cn(
+        "h-full",
+        "antialiased",
+        spaceGrotesk.variable,
+        inter.variable,
+        jetbrainsMono.variable,
+        "font-sans",
+        geist.variable
+      )}
       suppressHydrationWarning
     >
       <body className="flex min-h-full flex-col">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>
