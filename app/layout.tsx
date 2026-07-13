@@ -4,7 +4,6 @@ import { Space_Grotesk, Inter, JetBrains_Mono, Geist } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/context/Theme";
 import { cn } from "@/lib/utils";
-import Navbar from "@/components/navigation/navbar";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -28,9 +27,6 @@ export const metadata: Metadata = {
   title: "DevHocket",
   description:
     "Ask questions, share knowledge, and connect with developers. DevHocket is a community-driven Q&A platform for web development, algorithms, and programming help.",
-  icons: {
-    icon: "/images/favicon.ico",
-  },
 };
 
 export default function RootLayout({
@@ -54,7 +50,6 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <Navbar />
           {children}
         </ThemeProvider>
       </body>

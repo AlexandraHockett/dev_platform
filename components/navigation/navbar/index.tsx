@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className="flex-between background-light900_dark200 shadow-light-300 fixed z-50 w-full p-6 sm:px-12 dark:shadow-none">
       <Link href="/" className="flex items-center gap-1">
-        <Image src="/images/site-logo.svg" width={23} height={30} alt="DevHocket Logo" />
+        <Image src="/images/site-logo.svg" width={23} height={23} alt="DevHocket Logo" />
         <p className="h2-bold font-space-grotesk text-dark-100 dark:text-light-900 max-sm:hidden">
           Dev
           <span className="text-primary-300">Hocket</span>
