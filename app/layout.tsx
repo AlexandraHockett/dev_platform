@@ -50,7 +50,6 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
       suppressHydrationWarning
     >
       <head>
-        {" "}
         <link
           rel="stylesheet"
           type="text/css"
